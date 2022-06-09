@@ -1,6 +1,6 @@
 //import react and link
 import * as React from "react";
-import Layout from ".../components/Layout";
+import Layout from "../components/layout.js";
 
 //component definition
 const AboutPage = () => {
