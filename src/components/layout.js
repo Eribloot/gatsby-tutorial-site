@@ -3,7 +3,7 @@ import * as React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 
 //import css
-import { container, heading, navLinks, navLinkItem, navLinkText } from "./layout.module.css"
+import { container, heading, navLinks, navLinkItem, navLinkText, siteTitle } from "./layout.module.css"
 
 //declare layout to group all elements together for easy updates
 const Layout = ({ pageTitle, children }) => {
@@ -22,7 +22,7 @@ const Layout = ({ pageTitle, children }) => {
   return(
     <div className={container}>
       <title>{pageTitle} | {metadata.site.siteMetadata.title}</title>
-      <header>{metadata.site.siteMetadata.title}</header>
+      <header className={siteTitle}>{metadata.site.siteMetadata.title}</header>
       <nav>
         <ul className={navLinks}>
           <li className={navLinkItem}>
