@@ -1,15 +1,28 @@
 //import react and link
 import * as React from "react";
-import { Link } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 
 //import css
 import { container, heading, navLinks, navLinkItem, navLinkText } from "./layout.module.css"
 
 //declare layout to group all elements together for easy updates
 const Layout = ({ pageTitle, children }) => {
+
+  //metadata query via graphql
+  const metadata = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+
   return(
     <div className={container}>
-      <title>{pageTitle}</title>
+      <title>{pageTitle} | {metadata.site.siteMetadata.title}</title>
+      <header>{metadata.site.siteMetadata.title}</header>
       <nav>
         <ul className={navLinks}>
           <li className={navLinkItem}>

@@ -12,7 +12,7 @@ const IndexPage = () => {
       <p>I'm constructing this website following the Gatsby tutorial.</p>
       <StaticImage
         alt="A graphic of a web application."
-        src="../images/guiGraphic.png"
+        // src="../images/guiGraphic.png
       />
     </Layout>
   )
