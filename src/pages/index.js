@@ -1,16 +1,13 @@
 // Import React and Link
 import * as React from "react";
-import { Link } from "gatsby";
+import Layout from ".../components/Layout";
 
 //Define Component
 const IndexPage = () => {
-  return( 
-    <main>
-      <title>Landing Page</title>
-      <h1>Welcome to my Gatsby website! </h1>
-      <Link to="/about">About</Link>
-      <p>I'm making this by following the Gatsby Tutorial.</p>
-    </main>
+  return(
+    <Layout pageTitle="Home Page">
+      <p>I'm constructing this website following the Gatsby tutorial.</p>
+    </Layout>
   )
 }
 
